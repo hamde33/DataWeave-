@@ -1,0 +1,7 @@
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testMatch: ['**/tests/integration/**/*.test.ts'],
+  globalSetup: './tests/integration/globalSetup.ts',
+  globalTeardown: './tests/integration/globalTeardown.ts'
+};

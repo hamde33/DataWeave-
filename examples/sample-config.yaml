@@ -1,0 +1,33 @@
+version: '1.0'
+databases:
+  - type: mysql
+    host: localhost
+    port: 3306
+    username: your_username
+    password: your_password
+    database: your_database
+    sync_interval: 60
+  - type: postgres
+    host: localhost
+    port: 5432
+    username: your_username
+    password: your_password
+    database: your_database
+    sync_interval: 60
+  - type: mssql
+    host: localhost
+    port: 1433
+    username: your_username
+    password: your_password
+    database: your_database
+    sync_interval: 60
+  - type: csv
+    file_path: /path/to/your/file.csv
+    sync_interval: 60
+synchronization:
+  strategy: incremental
+  log_level: info
+  error_handling: retry
+  max_retries: 3
+  retry_interval: 5
+```
